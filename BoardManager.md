@@ -1,10 +1,11 @@
+#
+
 ```c#
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Tilemaps;
 using Random = UnityEngine.Random;
 
 /// <summary>
@@ -92,7 +93,7 @@ public class BoardManager : MonoBehaviour {
 	Transform boardHolder;
 
 	/// <summary>
-	/// アイテム類を配置するグリッド リスト
+	/// アイテムを配置するグリッド リスト
 	/// </summary>
 	List<Vector3> gridPositions = new List<Vector3>();
 
@@ -112,18 +113,18 @@ public class BoardManager : MonoBehaviour {
 	/// </summary>
 	void BoardSetup() {
 
-		//	ボードのtransformを取得
+		//	親オブジェクトのボードのtransformを取得
 		boardHolder = boardHolderObj.transform;
 
 		for (int y = -1; y < rows + 1; y++) {
 			for (int x = -1; x < columns + 1; x++) {
 
 				if (x == -1 || x == columns || y == -1 || y == rows) {
-
+					//	outerWall インスタンスを生成する
 					Instantiate(outerWall, new Vector3(x, y, 0), Quaternion.identity, boardHolder);
 				}
 				else {
-					//	インスタンスを生成する
+					//	floor インスタンスを生成する
 					Instantiate(floor, new Vector3(x, y, 0), Quaternion.identity, boardHolder);
 				}
 			}
