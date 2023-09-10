@@ -1,3 +1,4 @@
+```c#
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -182,3 +183,4 @@ public class BoardManager : MonoBehaviour {
 		}
 	}
 }
+```
