@@ -1,0 +1,11 @@
+# 各ゲームオブジェクトに必要なっコンポーネントについて
+## Player プレハブを作成する
+Tag: Player
+Sprite Renderer:
+  Additional Setting:
+    Sorting Layer: Units
+## Enemy プレハブを作成する
+## Wall プレハブを作成する
+## OuterWall プレハブを作成する
+## Exit プレハブを作成する
+## Food プレハブを作成する
